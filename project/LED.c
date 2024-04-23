@@ -1,11 +1,11 @@
 #include <msp430.h>
-#include "led.h"
+#include "LED.h"
 #include "switches.h"
 
 void led_init()
 {
-P1DIR |= LEDS;
-switch_state_changed = 1:
+  P1DIR |= LEDS;
+  switch_state_changed = 1:
 }
 
 void led_update(){
@@ -15,7 +15,7 @@ void led_update(){
       ledFlags |= switch_state_down ? LED_GREEN: 0;
       ledFlags |= switch_state_down ? 0: LED_RED;
       P1OUT &= (0xff - LEDS) | ledFlags;
-      P1OUT |= ledFlags
+      P1OUT |= ledFlags;
       }
       switch_state_changed = 0;
 }
@@ -41,9 +41,9 @@ void led_dim(){
      P1OUT = LED_GREEN;
      _delay_cycles(10000);
      P1OUT = !LED_GREEN;
-     _delay_cycles(10000):
+     _delay_cycles(10000);
      }
-     }
+}
 
 void led_siren(){
      for (int i = 0; i <1000; i++){
@@ -52,7 +52,7 @@ void led_siren(){
      P1OUT =!LED_RED;
      _delay_cycles(50000);
      P1OUT = !LED_GREEN;
-     _delay_cycles(50000):
+     _delay_cycles(50000);
      P1OUT = LED_RED;
      _delay_cycles(50000);
      }
