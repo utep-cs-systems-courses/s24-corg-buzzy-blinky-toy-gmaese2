@@ -38,7 +38,7 @@ void song()
 }
 
 
-void song()
+void play_song()
 {
   for(int i = 0; i<30;i++){
     if(i%2 == 0){
