@@ -15,7 +15,7 @@ void state_advance(int state){
     state = 0;
     break;
   case 3:
-    play_song();
+    siren_song();
     state = 0;
     break;
   case 4:
