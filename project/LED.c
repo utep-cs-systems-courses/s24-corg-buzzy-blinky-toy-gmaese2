@@ -22,39 +22,39 @@ void led_update(){
 
 void toggle_on(){
 	P1OUT = LED_RED;
-	_delay_cycles(500000);
+	__delay_cycles(500000);
 	P1OUT = LED_GREEN;
-	_delay_cycles(500000);
+	__delay_cycles(500000);
 	}
 
 void toggle_off(){
 	P1OUT =!(LED_GREEN);
-	_delay_cycles(500000);
+	__delay_cycles(500000);
 	P1OUT =!LED_RED;
-	_delay_cycles(500000);
+	__delay_cycles(500000);
 	}
 
 void led_dim(){
      for (int i = 0; i <1000; i++){
      P1OUT = LED_RED;
-     _delay_cycles(10000);
+     __delay_cycles(10000);
      P1OUT = LED_GREEN;
-     _delay_cycles(10000);
+     __delay_cycles(10000);
      P1OUT = !LED_GREEN;
-     _delay_cycles(10000);
+     __delay_cycles(10000);
      }
 }
 
 void led_siren(){
      for (int i = 0; i <1000; i++){
      P1OUT = LED_GREEN;
-     _delay_cycles(50000);
+     __delay_cycles(50000);
      P1OUT =!LED_RED;
-     _delay_cycles(50000);
+     __delay_cycles(50000);
      P1OUT = !LED_GREEN;
-     _delay_cycles(50000);
+     __delay_cycles(50000);
      P1OUT = LED_RED;
-     _delay_cycles(50000);
+     __delay_cycles(50000);
      }
 }
  
