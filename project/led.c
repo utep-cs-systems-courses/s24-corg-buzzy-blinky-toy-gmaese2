@@ -23,7 +23,7 @@ void toggle_on(){
   P1OUT = LED_RED;
   __delay_cycles(500000);
   P1OUT = LED_GREEN;
-  __delay_cycled(500000);
+  __delay_cycles(500000);
 }
 
 void toggle_off(){
