@@ -2,7 +2,7 @@
 #include "led.h"
 #include "switches.h"
 
-void led_int()
+void led_init()
 {
   P1DIR |= LEDS;
   switch_state_changed = 1;
