@@ -9,7 +9,7 @@ void buzzer_init()
   P2SEL2 &= ~(BIT6 | BIT7);
   P2SEL &= ~BIT7;
   P2SEL |= BIT6;
-  P2SEL = BIT6;
+  P2DIR = BIT6;
 }
 
 void buzzer_set_period(short cycles)
@@ -38,7 +38,7 @@ void song()
 }
 
 
-void play_song()
+void siren_song()
 {
   for(int i = 0; i<30;i++){
     if(i%2 == 0){
