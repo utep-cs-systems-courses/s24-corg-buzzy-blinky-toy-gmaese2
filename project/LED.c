@@ -5,7 +5,7 @@
 void led_init()
 {
   P1DIR |= LEDS;
-  switch_state_changed = 1:
+  switch_state_changed = 1;
 }
 
 void led_update(){
