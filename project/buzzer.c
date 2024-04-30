@@ -23,13 +23,13 @@ void song()
   float a = 2200;
   float mC = 650.41;
   float d = 1460.83;
-  float mD = 730.42;
+  float md = 730.42;
   float e = 1640.81;
-  float mF = 870.31;
+  float mf = 870.31;
   float g = 1960;
   float mG = 980;
 
-  float note[30] = {mF,0,a,mC,0,0,a,0,mF,d,d,d,0,0,0,0,mF,a,mC,0,a,0,mF,e,0,mD,d};
+  float note[30] = {mf,md,mf,md,mf,md,mf,md,mf,md,mf,md,mf,md,mf,md,mf,md,mf,md,mf,md,mf,md,mf,md,mf};
   for(int i = 0; i<30; i++){
     buzzer_set_period(note[i]);
     __delay_cycles(2500000);
@@ -46,10 +46,10 @@ void play_song()
       toggle_on();
     }
     else{
-      buzzer_set_period(1000);
+      buzzer_set_period(2000);
       toggle_off();
     }
-    __delay_cycles(2500000);
+    __delay_cycles(200000);
   }
   buzzer_set_period(0);
 }

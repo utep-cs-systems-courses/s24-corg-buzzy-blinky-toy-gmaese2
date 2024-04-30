@@ -49,12 +49,12 @@ void led_dim(){
 void led_siren(){
   for(int i = 0; i<20; i++){
     P1OUT = LED_GREEN;
-    __delay_cycles(500000);
-    P1OUT = !LED_RED;
-    __delay_cycles(2500000);
-    P1OUT = !LED_GREEN;
-    __delay_cycles(500000);
+    __delay_cycles(5000000);
     P1OUT = LED_RED;
-    __delay_cycles(2500000);
+    __delay_cycles(5000000);
+    P1OUT = !LED_RED;
+    __delay_cycles(5000000);
+    P1OUT = !LED_GREEN;
+    __delay_cycles(5000000);
   }
 }
